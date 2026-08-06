@@ -1,0 +1,33 @@
+{
+  "name": "pi-provider",
+  "version": "0.1.0",
+  "description": "Interactive provider/model manager for pi — add, delete and modify custom providers in ~/.pi/agent/models.json from the TUI.",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "provider",
+    "models",
+    "models.json",
+    "openrouter"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "pi": {
+    "extensions": ["./extensions"]
+  },
+  "scripts": {
+    "typecheck": "tsc",
+    "test": "node test/logic.test.mjs && node test/multiselect.test.mjs && node test/wizard.test.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "typescript": "^7.0.2"
+  }
+}
